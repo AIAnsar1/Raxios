@@ -5,25 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="333e8c7f-de9c-4c1d-a1b4-55e04d9886fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Raxios.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Google.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Yandex.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Config/Conf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/ColorService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/ErrorHandler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/GoogleTranslator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/TranslateEngine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/YandexTranslator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raxios.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/RXSErrorHandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/test_googletranslator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/test_rxserrorhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/Conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/ColorService.py" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ColorService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/ErrorHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ForTime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/GoogleTranslator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Core/GoogleTranslator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/TranslateEngine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Core/TranslateEngine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +30,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2ibqohh0T6pbaZ9TYrTydoTtsUa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,8 +43,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests for test_RXSErrorHandler.test_rxserrorhandler_no_msg_no_tts.executor": "Run",
+    "Python tests.Python tests for test_RXSErrorHandler.test_rxserrorhandler_with_msg.executor": "Run",
+    "Python tests.Python tests for test_rxserrorhandler.test_rxserrorhandler_no_msg_no_tts.executor": "Run",
+    "Python tests.Python tests for test_rxserrorhandler.test_rxserrorhandler_with_msg.executor": "Run",
+    "Python tests.Python tests for test_rxserrorhandler.test_rxserrorhandler_with_response_status_500.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Talxa",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,7 +58,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyProjects\Hack\Raxios\Services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for test_rxserrorhandler.test_rxserrorhandler_with_msg">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Raxios" />
       <option name="ENV_FILES" value="" />
@@ -87,6 +87,95 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for Tests.test_rxserrorhandler.test_rxserrorhandler_no_msg_no_tts" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Raxios" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Tests.test_rxserrorhandler.test_rxserrorhandler_no_msg_no_tts&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for Tests.test_rxserrorhandler.test_rxserrorhandler_with_msg" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Raxios" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Tests.test_rxserrorhandler.test_rxserrorhandler_with_msg&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_rxserrorhandler.test_rxserrorhandler_no_msg_no_tts" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Raxios" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_rxserrorhandler.test_rxserrorhandler_no_msg_no_tts&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_rxserrorhandler.test_rxserrorhandler_with_msg" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Raxios" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_rxserrorhandler.test_rxserrorhandler_with_msg&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_rxserrorhandler.test_rxserrorhandler_with_response_status_500" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Raxios" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_rxserrorhandler.test_rxserrorhandler_with_response_status_500&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_rxserrorhandler.test_rxserrorhandler_with_msg" />
+        <item itemvalue="Python tests.Python tests for test_rxserrorhandler.test_rxserrorhandler_with_response_status_500" />
+        <item itemvalue="Python tests.Python tests for test_rxserrorhandler.test_rxserrorhandler_no_msg_no_tts" />
+        <item itemvalue="Python tests.Python tests for Tests.test_rxserrorhandler.test_rxserrorhandler_with_msg" />
+        <item itemvalue="Python tests.Python tests for Tests.test_rxserrorhandler.test_rxserrorhandler_no_msg_no_tts" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -104,11 +193,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719769801732</updated>
-      <workItem from="1719769802756" duration="366000" />
+      <workItem from="1719769802756" duration="5765000" />
+      <workItem from="1719933444127" duration="6227000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Raxios$.coverage" NAME=" Coverage Results" MODIFIED="1719945810306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
   </component>
 </project>

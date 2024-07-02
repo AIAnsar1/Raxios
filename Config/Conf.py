@@ -1,8 +1,13 @@
 import re
 import urllib3
 import requests
+import logging
 
-import Service.DesignService
+from Services import ColorService
+
+ConfigLog = logging.getLogger(__name__)
+ConfigLog.addHandler(logging.NullHandler())
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 TOOL_VERISON = "0.1.0"
 LINE_SIZE = 90
@@ -203,9 +208,9 @@ def CheckIqorToolUpdate():
         LatestRelease = Response['tag_name'][1:]
 
         if TOOL_VERISON != LatestRelease:
-            print(f"Current Tool Version: {Service.DesignService.ColorService.FAIL} | {Service.DesignService.ColorService.ENDC}")
-            print(f"Latest Tool Version: {Service.DesignService.ColorService.GREEN} | {Service.DesignService.ColorService.ENDC}")
-            print(f"Please Upgrade The Tool At: {Service.DesignService.ColorService.CYAN} {ReleaseAPI} {Service.DesignService.ColorService.ENDC}")
+            print(f"Current Tool Version: {ColorService.FAIL} | {ColorService.ENDC}")
+            print(f"Latest Tool Version: {ColorService.GREEN} | {ColorService.ENDC}")
+            print(f"Please Upgrade The Tool At: {ColorService.CYAN} {ReleaseAPI} {ColorService.ENDC}")
             print("-", * LINE_SIZE)
     except Exception:
         print("Somethign Was Wrong, Can not get The Tool Latest update")

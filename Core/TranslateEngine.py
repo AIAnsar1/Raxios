@@ -4,7 +4,7 @@ import re
 import shutil
 import zipfile
 import tqdm
-import Service.DesignService
+from Services import ColorService as ErrorColors
 import google_trans_new as Google
 
 from pathlib import Path
@@ -37,10 +37,10 @@ class TranslateEngine():
             with zipfile.ZipFile(self.FilePathm, 'r') as zip:
                 print("Extracting The Epub File...", end='\r')
                 zip.extractall(self.FileExtractedPath)
-                print(f"Extracting The Epub File: [{Service.DesignService.ColorService.GREEN} DONE {Service.DesignService.ColorService.ENDC}]")
+                print(f"Extracting The Epub File: [{ErrorColors.GREEN} DONE {ErrorColors.ENDC}]")
             return True
         except Exception:
-            print(f"Extraction The Epub File: [{Service.DesignService.ColorService.FAIL} FAIL {Service.DesignService.ColorService.ENDC}]")
+            print(f"Extraction The Epub File: [{ErrorColors.FAIL} FAIL {ErrorColors.ENDC}]")
             return False
 
     def GetEpubHtmlPath(self):
@@ -54,7 +54,7 @@ class TranslateEngine():
             for _ in tqdm.tqdm(Pool.imap_unordered(self.TranslateHtml, self.HtmlListPath), total=len(self.HtmlListPath), desc='Translating'):
                 pass
         except Exception:
-            print(f"Translating Epub: {Service.DesignService.ColorService.FAIL} FAIL {Service.DesignService.ColorService.ENDC}")
+            print(f"Translating Epub: {ErrorColors.FAIL} FAIL {ErrorColors.ENDC}")
             raise
         Pool.close()
         Pool.join()
@@ -139,7 +139,7 @@ class TranslateEngine():
         try:
             Results = Pool.map(self.TranslateText, TextList)
         except Exception:
-            print(f"Translating Epub: [{Service.DesignService.ColorService.FAIL} FAIL {Service.DesignService.ColorService.ENDC}]")
+            print(f"Translating Epub: [{ErrorColors.FAIL} FAIL {ErrorColors.ENDC}]")
             raise
         Pool.close()
         Pool.join()
@@ -190,10 +190,10 @@ class TranslateEngine():
                 for File in FileExtractedAbsolutePath.rglob('*.*'):
                     Archive.write(str(File), str(File.relative_to(FileExtractedAbsolutePath)), compress_type=zipfile.ZIP_DEFLATED)
             shutil.rmtree(self.FileExtractedPath)
-            print(f"Making The Translated EPUB File: [{Service.DesignService.ColorService.GREEN} DONE {Service.DesignService.ColorService.ENDC}]")
+            print(f"Making The Translated EPUB File: [{ErrorColors.GREEN} DONE {ErrorColors.ENDC}]")
         except Exception as E:
             print(E)
-            print(f"Making The Translated EPUB File: [{Service.DesignService.ColorService.FAIL} FAIL {Service.DesignService.ColorService.ENDC}]")
+            print(f"Making The Translated EPUB File: [{ErrorColors.FAIL} FAIL {ErrorColors.ENDC}]")
 
 
     def ZipDir(self, Path, ZipH):
